@@ -12,7 +12,8 @@ const postSchema = new Schema({
       type: mongoose.Types.ObjectId,
       // search for it in the Comments collection
       ref: 'Comment'
-   }]
+   }],
+   department: { type: String, required: true }
 }, { timestamps: true })
 
 const Post = mongoose.model('Post', postSchema)

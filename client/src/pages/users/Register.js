@@ -9,6 +9,11 @@ let emptyForm = {
     password: '',
     email: ''
 }
+//
+const departments = ['Development', 'Finance', 'Operations', 'Marketing', 'Programs'];
+const deptOptions = departments.map((dept, i) => {
+    return <option key={i} value={dept}>{dept}</option>
+});
 
 function Register({ setUser }) {
 
@@ -39,40 +44,56 @@ function Register({ setUser }) {
     }
 
     return ( 
+       
         <div className="user-auth">
-            <h1>Register</h1>
+          <h1>Register</h1>
+           
             <form onSubmit={handleSubmit}>
-                <label htmlFor="username">Username:</label>
-                <br />
                 <input 
+                    placeholder="Firstname"
+                    type="text" 
+                    id="firstName"
+                    name="firstname"
+                    onChange={handleChange}
+                    value={form.firstName}
+                />
+                <input 
+                    placeholder="Lastname"
+                    type="text" 
+                    id="lastName"
+                    name="lastName"
+                    onChange={handleChange}
+                    value={form.lastName}
+                />
+                <input 
+                    placeholder="username"
                     type="text" 
                     id="username"
                     name="username"
                     onChange={handleChange}
                     value={form.username}
                 />
-                <br /><br />
-                <label htmlFor="email">Email:</label>
-                <br />
                 <input 
+                    placeholder="email"
                     type="email" 
                     id="email"
                     name="email"
                     onChange={handleChange}
                     value={form.email}
                 />
-                <br /><br />
-                <label htmlFor="password">Password:</label>
-                <br />
                 <input 
+                    placeholder="password"
                     type="password" 
                     id="password"
                     name="password"
                     onChange={handleChange}
                     value={form.password}
                 />
-                <br /><br />
-                <button>Submit</button>
+                <select name="department" id="" placeholder="Select Department" onChange={handleChange}>
+                    <option value=""></option>
+                    { deptOptions }
+                </select>
+                <button className="btn btn-outline-dark">Submit</button>
             </form>
         </div>
      );

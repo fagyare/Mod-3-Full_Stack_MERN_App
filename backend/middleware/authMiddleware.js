@@ -1,5 +1,4 @@
 const jwt = require('jsonwebtoken')
-
 const Post = require('../models/postModel')
 const Comment = require('../models/commentModel')
 
@@ -19,6 +18,8 @@ async function authorize(req, res, next) {
 
         const payload = jwt.verify(token, process.env.JWT_SECRET)
 
+        console.log('\nhunt for department')
+        console.log(payload)
         if (payload.error) {
             throw new Error(payload.error)
         }

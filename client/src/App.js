@@ -30,9 +30,10 @@ function App() {
       } else {
           setIsLoading(false)
       }
-
+debugger
       async function getLoggedInUser() {
-          const user = await userInfo()
+        debugger
+          const user = JSON.parse(localStorage.getItem('user')) || await userInfo()
           setUser(user)
           setIsLoading(false)
       }
@@ -40,12 +41,16 @@ function App() {
   }, [])
 
   let loggedIn = user.username
+  const userWithDept = {
+    name: user.username,
+    department: user.department
+  };
 
   return (
     <div className="App">
       <Navbar user={loggedIn} setUser={setUser} />
       <Routes>
-          <Route path='/posts' element={<IndexPost user={loggedIn} />} />
+          <Route path='/posts' element={<IndexPost user={userWithDept} />} />
           <Route path='/posts/:id' element={<ShowPost user={loggedIn} />} />
           {loggedIn ?
             <>

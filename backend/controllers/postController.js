@@ -1,8 +1,7 @@
 const Posts = require('../models/postModel')
 const Comments = require('../models/commentModel')
 
-const posts = require('../models/posts')
-
+const User = require('../models/userModel')
 module.exports.seed = async (req, res) => {
     // await Posts.deleteMany({})
     // await Posts.create(posts)
@@ -11,7 +10,10 @@ module.exports.seed = async (req, res) => {
 
 module.exports.index = async (req, res) => {
     try {
-        const posts = await Posts.find().sort({ createdAt: 1 })
+        console.log(req.query)
+        const posts = await Posts.find({
+            department: req.query.department
+        }).sort({ createdAt: 1 })
         res.status(200).json(posts)
     } catch(err) {
         res.status(400).json({ error: err.message })

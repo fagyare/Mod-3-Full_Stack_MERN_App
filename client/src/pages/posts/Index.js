@@ -3,12 +3,12 @@ import { Link } from "react-router-dom"
 import { getAllPosts } from "../../services/postService"
 
 function Index({ user }) {
-
+debugger
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
         async function loadData() {
-            const data = await getAllPosts()
+            const data = await getAllPosts("Operations")
             setPosts(data)
         }
         loadData()

@@ -23,7 +23,7 @@ function Login({ setUser }) {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        const token = await userLogin(form)
+        const { token, user } = await userLogin(form)
 
         if (!token) {
             setForm(emptyForm)
@@ -31,9 +31,8 @@ function Login({ setUser }) {
         }
 
         localStorage.setItem("token", token)
-
-        const user = await userInfo()
         setUser(user)
+        localStorage.setItem('user', JSON.stringify(user));
 
         navigate('/posts')
     }

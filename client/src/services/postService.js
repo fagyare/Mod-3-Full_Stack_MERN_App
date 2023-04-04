@@ -1,9 +1,9 @@
 import { customAxios, customAxiosWithAuth } from './api'
 
-export async function getAllPosts() {
+export async function getAllPosts(userDepartment) {
     const axios = customAxios()
     try {
-        const response = await axios.get('/posts')
+        const response = await axios.get(`/posts?department=${userDepartment}`)
         return response.data
     } catch(err) {
         console.log(err.message)
