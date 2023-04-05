@@ -35,7 +35,7 @@ function Show({ user }) {
 
     async function handleSubmit(e) {
         e.preventDefault()
-
+console.log(user)
         let comment = {
             body: bodyRef.current.value,
             user
@@ -81,7 +81,7 @@ function Show({ user }) {
                             <summary style={{ opacity: '.5' }}>Leave a comment:</summary>
                             <form onSubmit={handleSubmit}>
                                 <textarea ref={bodyRef} id="lc" cols="1" rows="1" />
-                                <button>Comment</button>
+                            <button class="btn btn-secondary">Comment</button>
                             </form>
                         </details>
                     }
@@ -89,14 +89,16 @@ function Show({ user }) {
                     <div className="buttons">
                         {post.user === user &&
                             <>
-                                <button onClick={handleDeletePost}>Delete</button>
+                                <button   onClick={handleDeletePost}>Delete</button>
                                 <Link to={`/posts/${post._id}/edit`}>
-                                    <button>Edit</button>
+                                 <button class="btn btn-secondary">Edit</button>
+                                    {/* <button>Edit</button> */}
                                 </Link>
                             </>
                         }
                         <Link to='/posts'>
-                            <button>Back</button>
+                            <button class="btn btn-secondary">Back</button>
+                            {/* <button>Back</button> */}
                         </Link>
                     </div>
                 </div>

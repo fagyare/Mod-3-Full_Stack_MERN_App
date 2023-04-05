@@ -5,10 +5,8 @@ import { getCommentFromPost, updateCommentOfIdFromPost } from '../../services/co
 function Edit() {
 
     const [comment, setComment] = useState({})
-
     const navigate = useNavigate()
     const params = useParams()
-
     const bodyRef = useRef()
 
     useEffect(() => {
@@ -35,10 +33,10 @@ function Edit() {
                     <label htmlFor="clr">Body:</label><br />
                     <textarea ref={bodyRef} id="clr" cols="30" rows="10" defaultValue={comment.body} /><br /><br />
 
-                    <button>Submit</button>
+                    <button class="btn btn-secondary">Submit</button>
                 </form>
                 <Link to={`/posts/${params.id}`}>
-                    <button>Back</button>
+                    <button class="btn btn-secondary">Back</button>
                 </Link>
             </div>
         </div>

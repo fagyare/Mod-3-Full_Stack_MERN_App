@@ -28,7 +28,8 @@ function Edit() {
 
     return ( 
         <div>
-            <h1>Edit Post</h1>
+            <h3>Edit Post</h3>
+            <br/>
             <div className='buttons' style={{ flexDirection: 'column' }}>
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="nme">Subject:</label><br />
@@ -37,7 +38,7 @@ function Edit() {
                     <label htmlFor="clr">Body:</label><br />
                     <textarea ref={bodyRef} id="clr" cols="30" rows="10" defaultValue={post.body} /><br /><br />
 
-                    <button>Submit</button>
+                    <button class="btn btn-secondary">Submit</button>
                 </form>
                 <Link to={`/posts/${post._id}`}>
                     <button>Back</button>

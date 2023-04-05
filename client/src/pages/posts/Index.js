@@ -17,9 +17,11 @@ function Index({ user }) {
     }, [user?.department])
     console.log(posts)
     return (
-            <section> { user && 
-    <div>
-                <h1>Index View</h1>
+
+        
+    <section> { user && 
+    <div >
+                <h3 className="post">Youth INC Logs </h3>
                 <div id="posts">
 
                         {posts?.map((post, index) => 
@@ -32,7 +34,7 @@ function Index({ user }) {
             
                     
                         <Link to="/posts/new">
-                            <button>NEW POST</button>
+                            <button class="btn btn-outline-warning btn-lg" >NEW POST</button>
                         </Link>
                     
     

@@ -7,11 +7,14 @@ ul {
 li {
   display: flex;
 }
+
 form {
   display: flex;
   flex-direction: column;
   padding: 50px;
+  margin: 50px auto;
 }
+
 input {
   margin: 20px;
 }
@@ -47,11 +50,20 @@ textarea {
   height: 200px;
 }
 
+.post {
+  text-align: center;
+  /* background-color: #fed700; */
+}
+
 .a-post {
-  border-top: 1px solid black;
-  padding: 20px;
-  box-shadow: 5px 4px #e9e9e9;
-  position: relative;
+
+     font-family: fantasy;
+    border-top: 1px solid #555559;
+    padding: 20px;
+    box-shadow: 1px -5px #fed700;
+    position: relative;
+    text-align: center;
+    
 }
 
 .a-post h4 {
@@ -63,6 +75,7 @@ textarea {
   position: absolute;
   top: -20px;
   opacity: .3;
+
 }
 
 .p-body {
@@ -244,6 +257,10 @@ textarea {
   text-decoration: none;
 }
 
+.site-nav {
+  display: flex;
+  
+}
 
 .user-auth #icon {
     position: absolute;
@@ -253,42 +270,39 @@ textarea {
 }
 
 .user-auth .app {
-  /* background-image: url("../public/logo2.png");  */
-    background-color: rgb(17, 17, 17);
+  background-image: url("../public/kid.png"); 
+    /* background-color: rgb(17, 17, 17); */
     color: rgb(212, 212, 212);
     height: 100vh;
 }
 
 .user-auth form {
   background-image: url("../public/logo3.jpg");
-    text-align: center;
-    border: 3px solid pink;
-    width: 20%;
+  /* background-image: url(http://localhost:3001/static/media/logo3.af5e815….jpg); */
+  text-align: center;
+  border: 3px solid pink;
+  width: 40%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 32px;
 }
 
 .user-auth {
   /* background-color: #fed700; */
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
+  background-color: rgba(0,0,0,0.3);
+  height: 100vh;
 }
 
-ul.user-auth {
-  /* background-image: url("../public/logo3.jpg"); */
+ul.site-nav {
+  width: 100%;
   background-color: #fed700;
-  /* background-color: rgb(68, 68, 68); */
   flex-direction: row;
-  justify-content: flex-end;
   border-left: none;
   border-right: none;
-  position: relative;
-
+  align-items: end;
+  justify-content: end;
+  align-items: space-around;
 }
 
 ul.user-auth li {
@@ -300,8 +314,23 @@ ul.user-auth li {
     margin-bottom: 20px;
 }
 
-li.posts-nav {
-  position: absolute;
+ul li {
+  margin: 0 16px;
+}
+
+footer {
+  position: fixed;
+  background-color:#555559;
+  color: whitesmoke;
+  bottom: 0;
   left: 0;
-  background-color: pink;
+  right: 0;
+  padding: 8px;
+  text-align: center;
+}
+
+.App {
+background-image: url("../public/kid.png");
+background-repeat: no-repeat;
+background-size: cover;
 }

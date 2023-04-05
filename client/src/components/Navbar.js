@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Home from '../components/Home';
 
 function Navbar({ user, setUser }) {
   
@@ -8,24 +9,34 @@ function Navbar({ user, setUser }) {
   };
 
   return (
-    <ul className="user-auth">
+    <nav>
+      <ul className="site-nav">
       {user ? 
         <>
           <li style={{ color: "black" }}>Welcome {user}!</li>
           <li className="posts-nav">
-            <Link to="/posts">Posts</Link>
+
+          <li>
+            <Link to="/about">About Us</Link>
+          </li>
+          <br/>
+          <li>
+            <Link to="/home">Home</Link>
+          </li>
+          <br/>
+          <li></li>
+            <Link to="/posts">Youth INC Logs</Link>
           </li>
           <li onClick={logout}>
             <Link to="/logout">Logout</Link>
           </li>
-          <li>
-            <Link to="/home">Home</Link>
-          </li>
+        
         </>
        : 
         <>
           <li className="posts-nav">
-            <Link to="/posts">Posts</Link>
+            {/* <Link to="/posts">Logs</Link> */}
+            <Link to="/">About Us</Link>
           </li>
           <li>
             <Link to="/home">Home</Link>
@@ -39,6 +50,7 @@ function Navbar({ user, setUser }) {
         </>
       }
     </ul>
+    </nav>
   );
 }
 

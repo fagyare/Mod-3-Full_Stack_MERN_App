@@ -1,20 +1,20 @@
 const posts = [
     {
-        subject: 'Once upon a time...',
-        body: 'The end.',
-        user: 'Bob',
+        subject: 'Laptop Issue',
+        body: 'My Laptop is not turning on',
+        user: 'Paul',
         comments: []
     },
     {
-        subject: 'To be or not to be',
-        body: 'That is the question.',
-        user: 'William',
+        subject: 'Expense Statement missing',
+        body: 'January 2023 statement is missing from report ',
+        user: 'Rachel',
         comments: []
     },
     {
-        subject: 'When the world needed him most...',
-        body: 'He vanished!',
-        user: 'Katara',
+        subject: 'New program added',
+        body: 'Program team has added a new nonprofit organization to the organization and needs to onboard them ',
+        user: 'Tracie',
         comments: []
     }
 ]

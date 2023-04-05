@@ -10,7 +10,6 @@ const postSchema = new Schema({
    comments: [{
       // an id referencing the comment
       type: mongoose.Types.ObjectId,
-      // search for it in the Comments collection
       ref: 'Comment'
    }],
    department: { type: String, required: true }

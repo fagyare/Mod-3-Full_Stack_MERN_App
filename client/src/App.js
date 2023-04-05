@@ -15,6 +15,10 @@ import Register from './pages/users/Register';
 import Login from './pages/users/Login';
 
 import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Footer from './components/Footer';
+import About from './components/About';
+
 
 function App() {
 
@@ -43,7 +47,11 @@ function App() {
   
     <div className="App">
       <Navbar user={user.name} setUser={setUser} />
+      {/* <Home /> */}
+
       <Routes>
+      <Route path='/about' element={<About />} >/</Route>
+
           <Route path='/posts' element={<IndexPost user={user} />} />
           <Route path='/posts/:id' element={<ShowPost user={user.name} />} />
           {user.name ?
@@ -61,6 +69,7 @@ function App() {
             </>
           }
       </Routes>
+      <Footer/>
     </div>
   );
 }

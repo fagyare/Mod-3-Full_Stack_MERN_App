@@ -20,18 +20,17 @@ function New({ user }) {
         navigate('/posts')
     }
 
-    debugger
     return ( 
         <div>
-            <h1>New Post</h1>
+            <h3>New Post</h3>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="nme">Subject:</label><br />
-                <input type="text" id="nme" ref={subjectRef} /><br /><br />
+                <input  class="form-control" type="text" id="nme" ref={subjectRef} /><br /><br />
 
-                <label htmlFor="clr">Body:</label><br />
-                <textarea id="clr" cols="30" rows="10" ref={bodyRef} /><br /><br />
+                <label htmlFor="clr">Comment:</label><br />
+                <textarea class="form-control" id="clr" cols="30" rows="10" ref={bodyRef} /><br /><br />
 
-                <button>Submit</button>
+                <button class="btn btn-secondary">Submit</button>
             </form>
         </div>
      );
