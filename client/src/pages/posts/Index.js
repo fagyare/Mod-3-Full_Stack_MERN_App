@@ -3,19 +3,22 @@ import { Link } from "react-router-dom"
 import { getAllPosts } from "../../services/postService"
 
 function Index({ user }) {
-debugger
     const [posts, setPosts] = useState([])
 
+
     useEffect(() => {
-        async function loadData() {
-            const data = await getAllPosts("Operations")
+      
+        const loadData = async () => {
+            const data = await getAllPosts(user?.department)
             setPosts(data)
         }
-        loadData()
-    }, [])
+        
+        setTimeout(loadData, 1500);
+    }, [user?.department])
     console.log(posts)
     return (
-            <div>
+            <section> { user && 
+    <div>
                 <h1>Index View</h1>
                 <div id="posts">
 
@@ -27,14 +30,16 @@ debugger
                             </Link>
                         )}
             
-                    {user && 
+                    
                         <Link to="/posts/new">
                             <button>NEW POST</button>
                         </Link>
-                    }
+                    
     
                 </div>
             </div>
+}
+</section>
     )
 }
 

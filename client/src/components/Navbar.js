@@ -16,7 +16,7 @@ function Navbar({ user, setUser }) {
             <Link to="/posts">Posts</Link>
           </li>
           <li onClick={logout}>
-            <Link to="/login">Logout</Link>
+            <Link to="/logout">Logout</Link>
           </li>
           <li>
             <Link to="/home">Home</Link>

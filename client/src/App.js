@@ -30,31 +30,25 @@ function App() {
       } else {
           setIsLoading(false)
       }
-debugger
       async function getLoggedInUser() {
-        debugger
-          const user = JSON.parse(localStorage.getItem('user')) || await userInfo()
+          const user = JSON.parse(localStorage.getItem('user'))
           setUser(user)
           setIsLoading(false)
       }
 
   }, [])
 
-  let loggedIn = user.username
-  const userWithDept = {
-    name: user.username,
-    department: user.department
-  };
 
   return (
+  
     <div className="App">
-      <Navbar user={loggedIn} setUser={setUser} />
+      <Navbar user={user.name} setUser={setUser} />
       <Routes>
-          <Route path='/posts' element={<IndexPost user={userWithDept} />} />
-          <Route path='/posts/:id' element={<ShowPost user={loggedIn} />} />
-          {loggedIn ?
+          <Route path='/posts' element={<IndexPost user={user} />} />
+          <Route path='/posts/:id' element={<ShowPost user={user.name} />} />
+          {user.name ?
             <>
-              <Route path='/posts/new' element={<NewPost user={loggedIn} />} />
+              <Route path='/posts/new' element={<NewPost user={user} />} />
               <Route path='/posts/:id/edit' element={<EditPost />} />
               <Route path='/posts/:id/comments/:cid' element={<EditComment />} />
               {!isLoading && <Route path='*' element={<Navigate to='/posts' />} />}

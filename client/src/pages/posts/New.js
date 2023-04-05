@@ -13,12 +13,14 @@ function New({ user }) {
         let post = {
             subject: subjectRef.current.value,
             body: bodyRef.current.value,
-            user
+            user: user.name,
+            department: user.department
         }
         await createPost(post)
         navigate('/posts')
     }
 
+    debugger
     return ( 
         <div>
             <h1>New Post</h1>
