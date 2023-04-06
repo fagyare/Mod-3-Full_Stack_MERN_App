@@ -63,11 +63,11 @@ console.log(user)
                             <div>{post.comments.map((comment, i) => 
                                 <div key={i} className="text-white comm">
                                     <div>{comment.user}</div>
-                                    <div className="text-white" >{comment.body}</div>
+                                    <div className="text-white"><em>  {comment.body}</em></div>
                                     {comment.user === user &&
                                         <>
-                                            <button onClick={() => handleDeleteComment(comment)}>x</button>
-                                            <Link to={`/posts/${post._id}/comments/${comment._id}`}><span>+</span></Link>
+                                            <button className="text-danger" onClick={() => handleDeleteComment(comment)}>x</button>
+                                            <Link to={`/posts/${post._id}/comments/${comment._id}`}><span className="text-success" >+</span></Link>
                                         </>
                                     }
                                 </div>
@@ -82,6 +82,8 @@ console.log(user)
                             <form onSubmit={handleSubmit}>
                                 <textarea ref={bodyRef} id="lc" cols="1" rows="1" />
                             <button class="btn btn-outline-warning">Comment</button>
+                            
+                            
                             </form>
                         </details>
                     }

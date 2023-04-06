@@ -1,21 +1,30 @@
 ﻿# Mod-3-Full_Stack_MERN_App
-Building a site where a small business can log post/problems for other team members 
-This site was built with CSS, HTM, JavaScript, and React. The database is saved on Mango DB and site is hosted on Render.com 
+Building a site where a small business can log a post/message for other team members. 
+
+This site was built with CSS, HTM, JavaScript, Express, Node.js, and React.
+MERN Stack 
+C.R.U.D  & I.N.D.U.C.E.S 
+The database is saved on Mango DB and site is hosted on Render.com 
+
+# CSS Framework: Bootsrap 
 
 Trello: https://trello.com/b/az7buJZ7/full-mern-app-project
 
 Host site: https://youth-frontend.onrender.com/login
 
-Features:
+# Features:
 Navbar: Home - About Us - Login - Sign up 
 The website has a Navbar that routes to multiple pages. 
 Home: The Home pages loads the post for all registered members, sorted by department
 
-Register: User register an account to for a department to report their isses
+## Register: 
+ - User register an account to for a department to report their isses
 
-Login: User log's in to the site to report/log posts for members in their team 
+# Login: 
+- User log's in to the site to report/log posts for members in their team 
 
-About Us: This page gives a brief history of the organization and its Mission and Vision 
+# About Us: 
+- This page gives a brief history of the organization and its Mission and Vision 
 
 
 Logic -

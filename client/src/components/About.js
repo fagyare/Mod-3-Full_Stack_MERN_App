@@ -10,8 +10,6 @@ function About() {
 
             <br/>
 
-
-
             <h4 className=" text-white bg-secondary opacity-75 about"> 
             
             <h1 className="abt-h1"> OUR MISSION & VISION</h1>

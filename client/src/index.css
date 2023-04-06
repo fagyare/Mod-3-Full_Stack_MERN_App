@@ -1,6 +1,6 @@
 ul {
   position: relative;
-  border: 1px solid black;
+  border: 1.5px solid #555559;
   list-style: none;
   padding: 20px;
 }

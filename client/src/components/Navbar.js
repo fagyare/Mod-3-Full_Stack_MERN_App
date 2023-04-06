@@ -13,7 +13,7 @@ function Navbar({ user, setUser }) {
       <ul className="site-nav">
       {user ? 
         <>
-          <li style={{ color: "black" }}>Welcome {user}!</li>
+          <li><strong style={{ color: "" }}>Welcome {user}! </strong></li>
           <li className="posts-nav">
 
           <li>
