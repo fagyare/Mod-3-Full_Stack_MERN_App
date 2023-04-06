@@ -64,9 +64,8 @@ function Login({ setUser }) {
                     value={form.password}
                 />
                 <br /><br />
-                <button className="btn btn-outline-dark">Submit</button>
+                <button className="btn btn-outline-dark">Log In</button>
 
-                {/* <button>Submit</button> */}
             </form>
         </div>
      );

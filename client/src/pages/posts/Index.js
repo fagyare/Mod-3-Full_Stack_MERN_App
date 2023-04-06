@@ -21,12 +21,17 @@ function Index({ user }) {
         
     <section> { user && 
     <div >
-                <h3 className="post">Youth INC Logs </h3>
                 <div className="bg-secondary opacity-75" id="posts">
+
+                            <Link to="/posts/new">
+                            <button class="btn btn-outline-warning btn-lg" >NEW POST</button>
+                           
+                        </Link>
+                            <h3 className="post">Youth INC Logs </h3>
 
                         {posts?.map((post, index) => 
                             <Link to={`/posts/${post._id}`} key={index}>
-                                <div className="text-white text-center post">
+                                <div className=" text-white text-center post">
                                     <h3>{post.subject}</h3>
                                 </div>
                             </Link>
@@ -34,7 +39,8 @@ function Index({ user }) {
             
                     
                         <Link to="/posts/new">
-                            <button class="btn btn-outline-warning btn-lg" >NEW POST</button>
+                            {/* <button class="btn btn-outline-warning btn-lg" >NEW POST</button> */}
+                            
                         </Link>
                     
     

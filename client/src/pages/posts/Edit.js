@@ -28,20 +28,20 @@ function Edit() {
 
     return ( 
         <div className='bg-secondary opacity-75 edit'>
-            <h3>Edit Post/Log</h3>
+            <h3 className="mb-5 text-white">Edit Post/Log</h3>
             <br/>
             <div className='buttons' style={{ flexDirection: 'column' }}>
                 <form onSubmit={handleSubmit}>
-                    <label htmlFor="nme">Subject:</label><br />
-                    <input type="text" id="nme" ref={subjectRef} defaultValue={post.subject} /><br /><br />
+                    <label className="text-warning">Subject:</label>
+                    <input type="text" id="nme" ref={subjectRef} defaultValue={post.subject} class="ms-0 form-control" /><br /><br />
 
-                    <label htmlFor="clr">Comment:</label><br />
-                    <textarea ref={bodyRef} id="clr" cols="30" rows="10" defaultValue={post.body} /><br /><br />
+                    <label className="text-warning">Comment:</label>
+                    <textarea class="form-control mt-4" ref={bodyRef} id="clr" cols="30" rows="10" defaultValue={post.body} /><br /><br />
 
-                    <button class="btn btn-secondary">Submit</button>
+                    <button class="btn btn-outline-warning">Submit</button>
                 </form>
                 <Link to={`/posts/${post._id}`}>
-                    <button>Back</button>
+                    <button className='btn btn-outline-warning'>Back</button>
                 </Link>
                 
             </div>

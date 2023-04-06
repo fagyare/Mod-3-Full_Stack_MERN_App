@@ -50,6 +50,23 @@ textarea {
   height: 200px;
 }
 
+#posts {
+  display: block;
+  margin: 90px;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#posts .btn {
+  width: 300px;
+  letter-spacing: 4px;
+}
+
+#posts a {
+  color: transparent;
+}
+
 .post {
   text-align: center;
   /* background-color: #fed700; */
@@ -275,12 +292,12 @@ textarea {
 
 }
 
-/* .sticky {
+.sticky {
   overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
-} */
+}
 
 .user-auth #icon {
     position: absolute;
@@ -300,7 +317,7 @@ textarea {
   background-image: url("../public/logo3.jpg");
   /* background-image: url(http://localhost:3001/static/media/logo3.af5e815….jpg); */
   text-align: center;
-  border: 3px solid pink;
+  border: 3px solid olive;
   width: 40%;
   background-position: center;
   background-repeat: no-repeat;
@@ -329,6 +346,7 @@ ul.site-nav {
   align-items: end;
   justify-content: end;
   align-items: space-around;
+  box-shadow: 20px;
 }
 
 ul.user-auth li {
@@ -342,6 +360,34 @@ ul.user-auth li {
 
 ul li {
   margin: 0 16px;
+}
+
+.about-abt {
+  padding: 50px;
+  line-height: 36px;
+  margin-top: 66px;
+  
+
+}
+
+.abt-h1 {
+  letter-spacing: 2px;
+  text-shadow: 5px;
+}
+
+.about {
+  width: 560px;
+  min-width: 60%;
+  margin: 30px auto;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.new-pst {
+  min-width: 60%;
+  margin: 90px;
+  padding: 50px;
+  border-radius: 10px;
 }
 
 footer {

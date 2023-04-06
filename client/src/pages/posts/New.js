@@ -21,16 +21,16 @@ function New({ user }) {
     }
 
     return ( 
-        <div>
-            <h3>New Post</h3>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="nme">Subject:</label><br />
-                <input  class="form-control" type="text" id="nme" ref={subjectRef} /><br /><br />
+        <div className="bg-secondary opacity-75 new-pst">
+            <h3 className="mb-5 text-white">New Log</h3>
+            <form onSubmit={handleSubmit} className="p-0 m-0">
+                <label className="text-warning">Subject:</label>
+                <input  class="form-control ms-0" type="text" id="nme" ref={subjectRef} /><br /><br />
 
-                <label htmlFor="clr">Comment:</label><br />
-                <textarea class="form-control" id="clr" cols="30" rows="10" ref={bodyRef} /><br /><br />
+                <label className="text-warning">Comment:</label><br />
+                <textarea class="form-control" id="clr" cols="30" rows="10" ref={bodyRef} />
 
-                <button class="btn btn-secondary">Submit</button>
+                <button class="btn btn-outline-warning">Submit</button>
             </form>
         </div>
      );

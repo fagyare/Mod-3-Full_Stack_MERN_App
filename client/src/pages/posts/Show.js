@@ -52,7 +52,7 @@ console.log(user)
     return (
             <div>
                 <div className="bg-secondary opacity-75 a-post">
-                    <h2>{post.subject}</h2>
+                    <h2 className="text-white">{post.subject}</h2>
                     <h5 style={{ opacity: '.7'}}>Posted by {post.user} on {new Date(post.createdAt).toLocaleDateString()} at {new Date(post.createdAt).toLocaleTimeString()}</h5>
                     <div className="text-white p-body">{post.body}</div><br /><br />
 
@@ -89,17 +89,20 @@ console.log(user)
                     <div className="buttons">
                         {post.user === user &&
                             <>
-                                <button className="btn btn-warning"  onClick={handleDeletePost}>Delete</button>
-                                <Link to={`/posts/${post._id}/edit`}>
-                                 <button class="btn btn-warning">Edit</button>
-                                    {/* <button>Edit</button> */}
-                                </Link>
+                         <Link to='/posts'>
+                            <button className="btn btn-outline-warning">Back</button>
+                       
+                        <Link to={`/posts/${post._id}/edit`}>
+                           <button class="btn btn-outline-warning">Edit</button>
+
+                            </Link>
+
+                            <button className="btn btn-outline-warning"  onClick={handleDeletePost}>Delete</button>
+                       
+                        </Link>
                             </>
                         }
-                        <Link to='/posts'>
-                            <button class="btn btn-warning">Back</button>
-                            {/* <button>Back</button> */}
-                        </Link>
+                       
                     </div>
                 </div>
             </div>
