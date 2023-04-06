@@ -55,15 +55,28 @@ textarea {
   /* background-color: #fed700; */
 }
 
-.a-post {
-
+.post {
+/* 
      font-family: fantasy;
     border-top: 1px solid #555559;
-    padding: 20px;
-    box-shadow: 1px -5px #fed700;
-    position: relative;
-    text-align: center;
+    /* padding: 20px; */
+    /* box-shadow: 1px -5px #fed700; */
+    /* position: relative; */
+    /* text-align: center; */ 
+    text-decoration: none;
+    margin: 30px;
     
+}
+
+.edit {
+  margin: 90px;
+  padding: 30px;
+  border-radius: 10px;
+}
+.a-post {
+  margin: 90px;
+  padding: 30px;
+  border-radius: 10px;
 }
 
 .a-post h4 {
@@ -259,8 +272,15 @@ textarea {
 
 .site-nav {
   display: flex;
-  
+
 }
+
+/* .sticky {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+} */
 
 .user-auth #icon {
     position: absolute;
@@ -292,7 +312,13 @@ textarea {
   /* background-color: #fed700; */
   background-color: rgba(0,0,0,0.3);
   height: 100vh;
+  margin: 40px;
+  padding: 40px;
 }
+
+/* .inpt {
+
+} */
 
 ul.site-nav {
   width: 100%;

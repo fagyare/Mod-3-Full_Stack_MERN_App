@@ -27,15 +27,15 @@ function Edit() {
     }
 
     return ( 
-        <div>
-            <h3>Edit Post</h3>
+        <div className='bg-secondary opacity-75 edit'>
+            <h3>Edit Post/Log</h3>
             <br/>
             <div className='buttons' style={{ flexDirection: 'column' }}>
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="nme">Subject:</label><br />
                     <input type="text" id="nme" ref={subjectRef} defaultValue={post.subject} /><br /><br />
 
-                    <label htmlFor="clr">Body:</label><br />
+                    <label htmlFor="clr">Comment:</label><br />
                     <textarea ref={bodyRef} id="clr" cols="30" rows="10" defaultValue={post.body} /><br /><br />
 
                     <button class="btn btn-secondary">Submit</button>

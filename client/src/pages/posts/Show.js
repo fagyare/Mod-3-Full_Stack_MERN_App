@@ -51,22 +51,22 @@ console.log(user)
 
     return (
             <div>
-                <div className="a-post">
+                <div className="bg-secondary opacity-75 a-post">
                     <h2>{post.subject}</h2>
-                    <h5 style={{ opacity: '.3'}}>Posted by {post.user} on {new Date(post.createdAt).toLocaleDateString()} at {new Date(post.createdAt).toLocaleTimeString()}</h5>
-                    <div className='p-body'>{post.body}</div><br /><br />
+                    <h5 style={{ opacity: '.7'}}>Posted by {post.user} on {new Date(post.createdAt).toLocaleDateString()} at {new Date(post.createdAt).toLocaleTimeString()}</h5>
+                    <div className="text-white p-body">{post.body}</div><br /><br />
 
                     {
                         post.comments?.length ?
                         <>
-                            <div>Comments:</div>
+                            <div className="text-warning">Comments:</div>
                             <div>{post.comments.map((comment, i) => 
-                                <div key={i} className="comm">
+                                <div key={i} className="text-white comm">
                                     <div>{comment.user}</div>
-                                    <div>{comment.body}</div>
+                                    <div className="text-white" >{comment.body}</div>
                                     {comment.user === user &&
                                         <>
-                                            <button onClick={() => handleDeleteComment(comment)}>X</button>
+                                            <button onClick={() => handleDeleteComment(comment)}>x</button>
                                             <Link to={`/posts/${post._id}/comments/${comment._id}`}><span>+</span></Link>
                                         </>
                                     }
@@ -78,7 +78,7 @@ console.log(user)
                     }
                     {user && 
                         <details ref={detailsRef}>
-                            <summary style={{ opacity: '.5' }}>Leave a comment:</summary>
+                            <summary className="text-warning" style={{ opacity: '.5' }}>Leave a comment:</summary>
                             <form onSubmit={handleSubmit}>
                                 <textarea ref={bodyRef} id="lc" cols="1" rows="1" />
                             <button class="btn btn-secondary">Comment</button>
@@ -89,15 +89,15 @@ console.log(user)
                     <div className="buttons">
                         {post.user === user &&
                             <>
-                                <button   onClick={handleDeletePost}>Delete</button>
+                                <button className="btn btn-warning"  onClick={handleDeletePost}>Delete</button>
                                 <Link to={`/posts/${post._id}/edit`}>
-                                 <button class="btn btn-secondary">Edit</button>
+                                 <button class="btn btn-warning">Edit</button>
                                     {/* <button>Edit</button> */}
                                 </Link>
                             </>
                         }
                         <Link to='/posts'>
-                            <button class="btn btn-secondary">Back</button>
+                            <button class="btn btn-warning">Back</button>
                             {/* <button>Back</button> */}
                         </Link>
                     </div>

@@ -46,10 +46,10 @@ function Register({ setUser }) {
     return ( 
        
         <div className="user-auth">
-          <h1>Register</h1>
+          <h1  className='text-white'>Register</h1>
            
             <form onSubmit={handleSubmit}>
-                <input 
+                <input className="--bs-warning-rgb"
                     placeholder="Firstname"
                     type="text" 
                     id="firstName"

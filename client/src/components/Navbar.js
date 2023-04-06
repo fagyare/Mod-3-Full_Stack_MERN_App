@@ -9,7 +9,7 @@ function Navbar({ user, setUser }) {
   };
 
   return (
-    <nav>
+    <nav className="sticky">
       <ul className="site-nav">
       {user ? 
         <>

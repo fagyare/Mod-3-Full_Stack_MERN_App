@@ -39,21 +39,24 @@ function Login({ setUser }) {
 
     return ( 
         <div className='user-auth'>
-            <h1>Login</h1>
+            <h1 className='text-white'>Login</h1>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="username">Username:</label>
+                {/* <label htmlFor="username">Username:</label> */}
                 <br />
-                <input 
+                <input className='inpt'
+                    placeholder="username"
                     type="text" 
                     id="username"
                     name="username"
                     onChange={handleChange}
                     value={form.username}
                 />
+                
                 <br /><br />
-                <label htmlFor="password">Password:</label>
+                <br />
                 <br />
                 <input 
+                    placeholder="password"
                     type="password" 
                     id="password"
                     name="password"

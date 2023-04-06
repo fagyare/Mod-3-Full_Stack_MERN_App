@@ -22,12 +22,12 @@ function Index({ user }) {
     <section> { user && 
     <div >
                 <h3 className="post">Youth INC Logs </h3>
-                <div id="posts">
+                <div className="bg-secondary opacity-75" id="posts">
 
                         {posts?.map((post, index) => 
                             <Link to={`/posts/${post._id}`} key={index}>
-                                <div className="a-post">
-                                    {post.subject}
+                                <div className="text-white text-center post">
+                                    <h3>{post.subject}</h3>
                                 </div>
                             </Link>
                         )}
