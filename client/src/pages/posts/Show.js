@@ -78,10 +78,10 @@ console.log(user)
                     }
                     {user && 
                         <details ref={detailsRef}>
-                            <summary className="text-warning" style={{ opacity: '.5' }}>Leave a comment:</summary>
+                            <summary className="text-warning" style={{ opacity: '.5' }}>Post a comment:</summary>
                             <form onSubmit={handleSubmit}>
                                 <textarea ref={bodyRef} id="lc" cols="1" rows="1" />
-                            <button class="btn btn-secondary">Comment</button>
+                            <button class="btn btn-outline-warning">Comment</button>
                             </form>
                         </details>
                     }
